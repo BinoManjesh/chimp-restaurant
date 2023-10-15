@@ -1,5 +1,8 @@
 import './style.css'
+import { make, makeText } from './tree_maker'
 
-const element = document.createElement("h1");
-element.innerText = "Hello World!";
-document.body.appendChild(element);
+document.body.appendChild(
+    make('div', {'id': 'content'}, [
+        makeText('h1', 'Hello World!')
+    ])
+)
