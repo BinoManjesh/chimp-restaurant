@@ -8,8 +8,30 @@ document.body.appendChild(
             makeText('button', 'Menu'),
             makeText('button', 'Contact'),
         ]),
-        make('div', {'id': 'tab-content'}, [
-            makeText('p', 'bruh')
-        ])
+        make('div', {'id': 'tab-content'}, [make('div')])
     ])
-)
+);
+
+const tabElements = [()=>makeText('h1', 'Chimp Restaurant'), ()=>makeText('h1', 'Menu'), ()=>makeText('h1', 'Contact Us')];
+const tabContent = document.querySelector('#tab-content');
+const tabButtons = document.querySelector('#tab-list').children;
+
+let selectedTab = 0;
+
+function setTab(number) {
+    if (number === selectedTab) {
+        return;
+    }
+    tabButtons[selectedTab].removeAttribute('class');
+    selectedTab = number;
+    tabButtons[number].className = 'selected';
+    tabContent.removeChild(tabContent.children[0]);
+    tabContent.appendChild(tabElements[number]());
+}
+    
+for (const i in tabElements) {
+    const button = tabButtons[i];
+    button.addEventListener('click', ()=>setTab(i));
+}
+
+setTab('0');
