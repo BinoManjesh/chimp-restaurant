@@ -1,8 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    color: inherit;
+    font-family: Poppins;
+}
+
+button {
+    background-color: #3f4b34;
+    border: none;
+    padding: 1em 1.5em;
+    font-size: medium;
+}
+
+body {
+    background-color: #5F6F52;
+    color: #cfb79e;
+}
+
 div#tab-list {
     display: flex;
     justify-content: center;
+    gap: 1.5em;
 }
 
 #tab-list > .selected {
-    background-color: gray;
+    background-color: #4c5742;
 }
