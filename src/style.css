@@ -9,7 +9,7 @@ h3 {
     text-align: center;
 }
 
-h3, p {
+h3, h4, p {
     margin: 0;
 }
 
@@ -73,4 +73,53 @@ div.review {
 
 div.review > :nth-child(2) {
     align-self: flex-end;
+}
+
+div.menu-item {
+    display: grid;
+    grid-template: 1fr auto auto / auto auto 1fr;
+    place-items: center;
+    gap: 1em;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+div.menu-item > img {
+    max-height: 50vh;
+    object-fit: cover;
+}
+
+div.menu-item > img, div.menu-item > p.desc {
+    grid-column: span 3;
+}
+
+div.indicator {
+    border: 2px solid red;
+    border-radius: 2px;
+    padding: 2px;
+    width: fit-content;
+    height: fit-content;
+}
+
+div.indicator > div {
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    background-color: red;
+}
+
+div.indicator.green {
+    border-color: green;
+}
+
+div.indicator.green > div {
+    background-color: green;
+}
+
+div.menu-item > p.price {
+    text-align: end;
+}
+
+div.menu-item > p.desc {
+    justify-self: start;
 }
