@@ -5,6 +5,14 @@
     font-family: Poppins;
 }
 
+h3 {
+    text-align: center;
+}
+
+h3, p {
+    margin: 0;
+}
+
 button {
     background-color: #3f4b34;
     border: none;
@@ -21,8 +29,48 @@ div#tab-list {
     display: flex;
     justify-content: center;
     gap: 1.5em;
+    margin-bottom: 4em;
 }
 
 #tab-list > .selected {
     background-color: #4c5742;
+}
+
+div#tab-content, div#tab-content > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+div.hero > p {
+    font-size: xx-large;
+}
+
+img.hero {
+    max-height: 50%;
+}
+
+div.card {
+    background-color: rgb(123, 91, 57);
+    width: fit-content;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+div.card > * {
+    width: 100%;
+}
+
+div.review {
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 1em;
+    flex-direction: column;
+}
+
+div.review > :nth-child(2) {
+    align-self: flex-end;
 }

@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "npx webpack serve --open"
+    "start": "npx webpack serve --open-app-name chromium"
   },
   "keywords": [],
   "author": "Bino Manjesh <binomanjesh@gmail.com>",

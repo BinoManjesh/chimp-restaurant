@@ -1,5 +1,6 @@
 import './style.css'
 import { make, makeText } from './tree_maker'
+import makeHome from './home';
 
 document.body.appendChild(
     make('div', {'id': 'content'}, [
@@ -12,7 +13,8 @@ document.body.appendChild(
     ])
 );
 
-const tabElements = [()=>[makeText('h1', 'Chimp Restaurant')], ()=>[makeText('h1', 'Menu')], ()=>[makeText('h1', 'Contact Us')]];
+const Home = makeHome();
+const tabElements = [Home, [makeText('h1', 'Menu')], [makeText('h1', 'Contact Us')]];
 const tabContent = document.querySelector('#tab-content');
 const tabButtons = document.querySelector('#tab-list').children;
 
@@ -25,7 +27,7 @@ function setTab(number) {
     tabButtons[selectedTab].removeAttribute('class');
     selectedTab = number;
     tabButtons[number].className = 'selected';
-    tabContent.replaceChildren(...tabElements[number]());
+    tabContent.replaceChildren(...tabElements[number]);
 }
     
 for (const i in tabElements) {
