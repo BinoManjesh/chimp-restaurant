@@ -14,7 +14,7 @@ h3, h4, p {
 }
 
 button {
-    background-color: #3f4b34;
+    background-color: #4c5742;
     border: none;
     padding: 1em 1.5em;
     font-size: medium;
@@ -33,7 +33,8 @@ div#tab-list {
 }
 
 #tab-list > .selected {
-    background-color: #4c5742;
+    background-color: #3f4b34;
+    transform: scale(1.2);
 }
 
 div#tab-content, div#tab-content > div {
