@@ -123,3 +123,21 @@ div.menu-item > p.price {
 div.menu-item > p.desc {
     justify-self: start;
 }
+
+div.contact {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    max-width: 1000px;
+}
+
+div.contact > div.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+}
+
+div.contact > div.card > img {
+    flex-grow: 1;
+    object-fit: cover;
+}

@@ -2,6 +2,7 @@ import './style.css'
 import { make, makeText } from './tree_maker'
 import makeHome from './home';
 import makeMenu from './menu';
+import makeContact from './contact';
 
 document.body.appendChild(
     make('div', {'id': 'content'}, [
@@ -16,8 +17,9 @@ document.body.appendChild(
 
 const Home = makeHome();
 const Menu = makeMenu();
+const Contact = makeContact();
 
-const tabElements = [Home, Menu, [makeText('h1', 'Contact Us')]];
+const tabElements = [Home, Menu, Contact];
 const tabContent = document.querySelector('#tab-content');
 const tabButtons = document.querySelector('#tab-list').children;
 
